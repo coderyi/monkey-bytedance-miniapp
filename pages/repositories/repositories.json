@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Button",
+  "usingComponents": {
+    "repository-item": "/components/repository-item/repository-item",
+    "nav-bar": "/components/nav-bar/nav-bar"
+  }
+}

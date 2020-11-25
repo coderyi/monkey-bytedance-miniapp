@@ -1,0 +1,14 @@
+<!-- pages/users/users.ttml -->
+<view style="display:flex;flex-direction:column">
+  <nav-bar title="{{currentLanguage}}" showBack="{{false}}" leftTitle="language" bind:onLeft="toLanguage"></nav-bar>
+  <view> 
+    <view tt:for="{{rows}}" tt:for-index="idx" data-index="{{idx}}" bindtap="onClickCell">
+      <repository-item rank="{{idx}}" avatar_url="{{item.owner.avatar_url}}" name="{{item.name}}" stargazers_count="{{item.stargazers_count}}" login="{{item.owner.login}}" homepage="{{item.homepage}}" repdescription="{{item.description}}"></repository-item>
+    </view>
+  </view>
+
+  <view style="width:750rpx;display:flex;justify-content: center;" >
+    <text style="color:#9C9C9C;text-align:center;font-size:30rpx">{{loading ? '正在努力加载...' : '加载更多'}}</text>
+  </view>
+</view>
+

@@ -1,0 +1,76 @@
+/* pages/user-detail/user-detail.ttss */
+.user-div {
+  display: flex;
+  width: 740rpx;
+  height: 300rpx;
+  flex-direction: row;
+  /*background-color: #ffffff;*/
+  margin: 5rpx;
+  padding: 10rpx;
+  /*border-width: 1px;*/
+  /*border-color: #cccccc;*/
+  overflow: visible;
+}
+.user-header {
+  display: flex;
+  flex-direction: column;
+  flex :1.2;
+  margin-left:5rpx;
+  /*background-color: #ffff33;*/
+}
+.user-row {
+  display: flex;
+  flex-direction: column;
+  flex :2;
+  margin-left:5rpx;
+  /*background-color: #fff12f;*/
+}
+.user-footer {
+  display: flex;
+  flex-direction: column;
+  flex :3;
+  margin-left:5rpx;
+  /*background-color: #34ffff;*/
+}
+.title {
+  font-size: 26rpx;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  color: #3e434f;
+}
+.tabbar {
+  display: flex;
+  flex-direction: row;
+  background-color: lightgray;
+}
+.tab {
+  height: 70rpx;
+  width: 160rpx;
+  justify-content: center;
+  align-items: center;
+}
+.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  transition: left 0.2s ease-in-out;
+}
+.tab-panels {
+  position: relative;
+  width: 3750rpx;
+  flex: 1;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: white;
+  transition: left 0.2s ease-in-out;
+  display: flex;
+}
+.panel {
+  /* font-size: 100rpx; */
+  color: #707070;
+  align-items: center;
+  width: 750rpx;
+}

@@ -1,0 +1,20 @@
+<!-- components/repository-item/repository-item.ttml -->
+<div class="repItem">
+  <div class = "titleDiv">
+    <text class="item-title" style= "margin-left:10rpx;width:90rpx;height:50rpx;font-size: 40rpx ;text-overflow: ellipsis;text-align: center;align-items:center;">{{rank+1}}</text>
+    <image style="margin-left:10rpx;width: 80rpx;height: 80rpx;justify-content:center;border-radius:10rpx;" src="{{avatar_url}}"></image>
+  </div>
+  <div class= "detailDiv">
+    <div class="detailTitleItem">
+      <text class="item-title" style= "text-overflow:ellipsis;width:400rpx;margin-left:30rpx;margin-right:0;flex:1;font-size:30rpx;">{{name}}</text>
+      <text class="item-star" style= "text-overflow:ellipsis;width:400rpx;margin-left:30rpx;margin-right:0;flex:1;">{{'Star:'+stargazers_count}}</text>
+    </div>
+    <div class="detailCenterItem">
+      <text class="item-star" style= "text-overflow:ellipsis;width:240rpx;margin-left:30rpx;margin-right:0">{{'Owner:'+login}}</text>
+      <text class="item-homepage" style= "text-overflow:ellipsis;width:320rpx;margin-left:20rpx;margin-right:0">{{homepage}}</text>
+    </div>
+    <div class="detailFooterItem">
+      <text class="item-description" style= "text-overflow:ellipsis;margin-left:30rpx;width:580rpx">{{repdescription?repdescription:''}}</text>
+    </div>
+  </div>
+</div>

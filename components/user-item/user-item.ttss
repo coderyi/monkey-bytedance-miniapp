@@ -1,0 +1,16 @@
+/* components/user-item/user-item.ttss */
+  .item {
+    /* border-bottom-width: 1rpx; */
+    /* border-bottom-color: #c0c0c0; */
+    border-bottom: 1rpx solid #c0c0c0;
+    flex-direction:row;
+    margin-right:5rpx;
+    margin-left:5rpx;
+    justify-content:flex-start;
+    padding: 20rpx;
+    overflow: visible;
+    display: flex;
+  }
+  .item-title {
+    color: #437ABE;
+  }

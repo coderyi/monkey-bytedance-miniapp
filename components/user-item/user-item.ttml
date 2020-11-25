@@ -1,0 +1,7 @@
+<!-- components/user-item/user-item.ttml -->
+<!-- <text>components/user-item/user-item.ttml</text> -->
+<div class="item">
+  <text class="item-title" style= "margin-left:10rpx;width:90px;font-size: 40rpx ;text-overflow: ellipsis;text-align: center;align-items:center;padding-top:16rpx">{{index+1}}</text>
+  <image style="width: 80rpx;height: 80rpx;justify-content:center;border-radius:10px;" src="{{avatar_url}}"></image>
+  <text class="item-title" style= "font-size: 40rpx;text-overflow:ellipsis;width:400rpx;margin-left:30rpx;margin-right:0rpx;flex:1;padding-top:16rpx">{{login}}</text>
+</div>

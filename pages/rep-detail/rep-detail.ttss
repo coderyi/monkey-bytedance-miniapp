@@ -1,0 +1,115 @@
+/* pages/rep-detail/rep-detail.ttss */
+.item-rep-name {
+  color: #437ABE;
+  font-size: 32rpx;
+  margin-top:10rpx;
+  text-overflow:ellipsis;
+  margin-left:30rpx;
+  flex :1;
+  margin-right:0rpx;
+}
+.item-create-time {
+  font-size: 24rpx;
+  margin-top:10rpx;
+  text-overflow:ellipsis;
+  margin-left:30rpx;
+  flex :1;
+  margin-right:0rpx;
+}
+.item-header-text {
+  color: #437ABE;
+  font-size: 24rpx;
+  margin-top:10rpx;
+  text-overflow:ellipsis;
+  margin-left:30rpx;
+  flex :1;
+  margin-right:0rpx;
+}
+.item-desc-text {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  flex: 1;
+  margin-right: 10rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient: vertical;
+}
+
+.rep-div {
+  display: flex;
+  width: 740rpx;
+  height: 200rpx;
+  flex-direction: column;
+  /*background-color: #ffffff;*/
+  margin: 5rpx;
+  padding: 10rpx;
+  /*border-width: 1px;*/
+  /*border-color: #cccccc;*/
+  overflow: visible;
+}
+.rep-header {
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+  margin-left: 5rpx;
+  /*background-color: #ffff33;*/
+}
+.rep-center {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin-left: 5rpx;
+  /*background-color: #fff12f;*/
+}
+.rep-footer {
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+  margin-left: 5rpx;
+  /*background-color: #34ffff;*/
+}
+.title {
+  font-size: 26rpx;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  color: #3e434f;
+}
+.tabbar {
+  display: flex;
+  flex-direction: row;
+  background-color: lightgray;
+}
+.tab {
+  height: 70rpx;
+  width: 160rpx;
+  justify-content: center;
+  align-items: center;
+}
+.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  transition: left 0.2s ease-in-out;
+}
+.tab-panels {
+  display: flex;
+  position: relative;
+  width: 3750rpx;
+  flex: 1;
+  flex-direction: row;
+  align-items: stretch;
+  /*background-color: #F5F5F5;*/
+  transition: left 0.2s ease-in-out;
+}
+.panel {
+  font-size: 100rpx;
+  color: #707070;
+  align-items: center;
+  width: 750rpx;
+}

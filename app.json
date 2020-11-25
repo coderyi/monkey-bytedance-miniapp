@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/users/users",
+    "pages/repositories/repositories",
+    "pages/rep-detail/rep-detail",
+    "pages/city/city",
+    "pages/country/country",
+    "pages/language/language",
+    "pages/user-detail/user-detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Mini Program",
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/users/users",
+        "iconPath": "assets/githubLine.png",
+        "selectedIconPath": "assets/githubLine.png",
+        "text": "users"
+      },
+      {
+        "pagePath": "pages/repositories/repositories",
+        "iconPath": "assets/gitRepositoryLine.png",
+        "selectedIconPath": "assets/gitRepositoryLine.png",
+        "text": "repositories"
+      }
+    ]
+  }
+}

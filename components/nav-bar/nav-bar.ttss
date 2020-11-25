@@ -1,0 +1,25 @@
+/* components/nav-bar/nav-bar.ttss */
+.iconfont {
+  font-family: iconfont;
+}
+.nav-bar {
+  height: 88rpx;
+  background-color: #3D82C7;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 40rpx;
+  display: flex;
+}
+.nav-bar-title {
+  color: #FFFFFF;
+  font-size: 32rpx;
+}
+.nav-bar-icon {
+  color: #FFFFFF;
+  font-size: 36rpx;
+  width: 44rpx;
+  height: 44rpx;
+}

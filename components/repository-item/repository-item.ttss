@@ -1,0 +1,77 @@
+/* components/repository-item/repository-item.ttss */
+
+.repItem {
+  display: flex;
+  border-bottom: 1rpx solid #c0c0c0;
+  margin-right:5rpx;
+  margin-left:5rpx;
+  justify-content:flex-start;
+  padding: 20rpx;
+  overflow: visible;
+  flex-direction:row;
+}
+.item-title {
+  color: #437ABE;
+  lines:1;
+  margin-top:10rpx;
+}
+.item-star {
+  color: #9C9C9C;
+  font-size: 24rpx;
+  lines:1;
+  margin-top:10rpx;
+}
+.item-homepage {
+  color: #437ABE;
+  font-size: 24rpx;
+  lines:1;
+  margin-top:10rpx;
+  display:block; /*这里设置inline-block或者block；根据使用情况来定（行内元素需要加这个，块级元素和行内块级可以不用）*/
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.item-description {
+  color: black;
+  font-size: 26rpx;
+  lines:2;
+  margin-top:10rpx;
+  height: 80rpx;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:2; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient:vertical;
+}
+.titleDiv {
+  display: flex;
+  flex-direction: column;
+  flex :1;
+  margin-left:5rpx;
+  height: 200rpx
+}
+.detailDiv {
+  display: flex;
+  flex-direction: column;
+  flex :5;
+  margin-left:5rpx;
+}
+.detailTitleItem {
+  display: flex;
+  flex-direction: row;
+  flex :1;
+  margin-left:5rpx;
+}
+.detailCenterItem {
+  display: flex;
+  flex-direction: row;
+  flex :1;
+  height: 20rpx;
+  margin-left:5rpx;
+}
+.detailFooterItem {
+  display: flex;
+  flex-direction: row;
+  flex :2;
+  margin-left:5rpx;
+}

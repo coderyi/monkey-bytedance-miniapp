@@ -1,0 +1,8 @@
+<!-- components/nav-bar/nav-bar.ttml -->
+  <div class="nav-bar">
+    <image tt:if="{{showBack}}" class="iconfont nav-bar-icon" src="/assets/leftBackWhite.png" bindtap="onBack"></image>
+    <!-- <text tt:if="{{showBack}}" class="iconfont nav-bar-icon" bindtap="onBack">&#xe8b5;</text> -->
+    <text tt:if="{{!showBack}}" class="nav-bar-title" bindtap="onLeft">{{leftTitle}}</text>
+    <text class="nav-bar-title">{{title}}</text>
+    <text class="nav-bar-title" style="margin-right:170rpx" bindtap="onRight">{{rightTitle}}</text>
+  </div>

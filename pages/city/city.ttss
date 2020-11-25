@@ -1,0 +1,19 @@
+/* pages/city/city.ttss */
+  .list {
+    width: 750rpx;
+    flex: 1;
+  }
+  .row {
+    width: 750rpx;
+  }
+  .item {
+    justify-content: center;
+    /* border-bottom-width: 2rpx; */
+    /* border-bottom-color: #c0c0c0; */
+    border-bottom: 2rpx solid #c0c0c0;
+    height: 60rpx;
+    padding:20rpx;
+  }
+  .item-title {
+
+  }

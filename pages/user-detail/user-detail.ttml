@@ -1,0 +1,58 @@
+<!-- pages/user-detail/user-detail.ttml -->
+<div>
+  <nav-bar title="{{user_login}}" showBack="{{true}}"></nav-bar>
+  <div class="user-div" style="height:200rpx">
+    <div class= "user-header">
+      <image style="width: 120rpx;height:120rpx;margin-top:20rpx;" src="{{user_avatar_url}}"></image>
+      <text style="margin-top:20rpx;font-size: 18rpx;">{{userdetail.created_at}}</text>
+    </div>
+    <div class= "user-row">
+      <text style="margin-top:20rpx;color:#437ABE;"> {{user_login}}</text>
+      <text style="margin-top:20rpx;color:#9C9C9C;font-size:24rpx"> {{userdetail.name}}</text>
+      <text style="margin-top:20rpx;font-size:24rpx"> {{userdetail.company?userdetail.company:''}}</text>
+    </div>
+    <div class= "user-footer">
+      <text style="margin-top:20rpx"> {{userdetail.email?userdetail.email:' '}}</text>
+      <text style="margin-top:20rpx;color:#437ABE;font-size:24rpx" bindtap="onClickBlog" tt-if="{{userdetail.blog}}"> {{userdetail.blog}}</text>
+      <text style="margin-top:20rpx;font-size:24rpx"> {{userdetail.location}}</text>
+    </div>
+  </div>
+  <div class="tabbar">
+    <!-- <div class="tab active"></div> -->
+    <div  class="tab" data-index="{{0}}" bindtap="clickTab">
+      <text class="title" style="{{activeTab == 0 ? selectedTabStyle : ''}}">repositories</text>
+    </div>
+    <div  class="tab" data-index="{{1}}" bindtap="clickTab">
+      <text class="title" style="{{activeTab == 1 ? selectedTabStyle : ''}}">following</text>
+    </div>
+    <div  class="tab" data-index="{{2}}" bindtap="clickTab">
+      <text class="title" style="{{activeTab == 2 ? selectedTabStyle : ''}}">followers</text>
+    </div>
+  </div>
+  <div class="tab-panels"  style="{{tabPanelsStyle}}">
+    <div class="panel">
+      <view tt:for="{{rows}}" tt:for-index="idx">
+        <repository-item rank="{{idx}}" avatar_url="" name="{{item.name}}" stargazers_count="{{item.stargazers_count}}" login="{{item.owner.login}}" homepage="{{item.homepage}}" repdescription="{{item.description}}"></repository-item>
+      </view>
+      <view style="width:750rpx;display:flex;justify-content: center" >
+        <text style="color:#9C9C9C;text-align:center;font-size:30rpx">{{loading ? '正在努力加载...' : '加载更多'}}</text>
+      </view>
+    </div>
+    <div class="panel">
+      <view tt:for="{{rows}}" tt:for-index="idx">
+        <user-item index="{{idx}}" login="{{item.login}}" avatar_url="{{item.avatar_url}}" data-index="{{ idx }}" bindtap="onClickCell"></user-item>
+      </view>
+      <view style="width:750rpx;display:flex;justify-content: center" >
+        <text style="color:#9C9C9C;text-align:center;font-size:30rpx">{{loading ? '正在努力加载...' : '加载更多'}}</text>
+      </view>
+    </div>
+    <div class="panel">
+      <view tt:for="{{rows}}" tt:for-index="idx">
+        <user-item index="{{idx}}" login="{{item.login}}" avatar_url="{{item.avatar_url}}" data-index="{{ idx }}" bindtap="onClickCell"></user-item>
+      </view>
+      <view style="width:750rpx;display:flex;justify-content: center" >
+        <text style="color:#9C9C9C;text-align:center;font-size:30rpx">{{loading ? '正在努力加载...' : '加载更多'}}</text>
+      </view>
+    </div>
+  </div>
+</div>

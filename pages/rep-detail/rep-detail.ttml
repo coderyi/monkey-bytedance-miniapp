@@ -1,0 +1,54 @@
+<!-- pages/rep-detail/rep-detail.ttml -->
+<div>
+  <nav-bar title="{{user_login?user_login:''}}" showBack="{{true}}"></nav-bar>
+  <div class="rep-div">
+    <div class= "rep-header">
+      <text class="item-rep-name"> {{rep_name+'/'+rep_login}}</text>
+    </div>
+    <div class= "rep-center">
+      <text class="item-create-time"> {{rep_created_at}}</text>
+      <text class="item-header-text" bindtap="onClickUrl">{{rep_homepage}}</text>
+    </div>
+    <div class= "rep-footer">
+      <text class="item-desc-text"> {{rep_description}}</text>
+    </div>
+  </div>
+  <div class="tabbar">
+    <!-- <div class="tab active"></div> -->
+    <div  class="tab" data-index="{{0}}" bindtap="clickTab">
+      <text class="title" style="{{activeTab == 0 ? selectedTabStyle : ''}}">contributors</text>
+    </div>
+    <div  class="tab" data-index="{{1}}" bindtap="clickTab">
+      <text class="title" style="{{activeTab == 1 ? selectedTabStyle : ''}}">forks</text>
+    </div>
+    <div  class="tab" data-index="{{2}}" bindtap="clickTab">
+      <text class="title" style="{{activeTab == 2 ? selectedTabStyle : ''}}">stargazers</text>
+    </div>
+  </div>
+  <div class="tab-panels" style="{{tabPanelsStyle}}">
+    <div class="panel" title="Objective-C" ref="cityuserrank">
+      <view tt:for="{{rows}}" tt:for-index="idx">
+        <user-item index="{{idx}}" login="{{item.login}}" avatar_url="{{item.avatar_url}}" data-index="{{ idx }}" bindtap="onClickCell"></user-item>
+      </view>
+      <view style="width:750rpx;display:flex;justify-content: center" >
+        <text style="color:#9C9C9C;text-align:center;font-size:30rpx">{{loading ? '正在努力加载...' : '加载更多'}}</text>
+      </view>
+    </div>
+    <div class="panel" title="Objective-C">
+      <view tt:for="{{rows}}" tt:for-index="idx">
+        <user-item index="{{idx}}" login="{{item.owner.login}}" avatar_url="{{item.owner.avatar_url}}" data-index="{{ idx }}" bindtap="onClickCell"></user-item>
+      </view>
+      <view style="width:750rpx;display:flex;justify-content: center" >
+        <text style="color:#9C9C9C;text-align:center;font-size:30rpx">{{loading ? '正在努力加载...' : '加载更多'}}</text>
+      </view>
+    </div>
+    <div class="panel" title="Objective-C">
+      <view tt:for="{{rows}}" tt:for-index="idx">
+        <user-item index="{{idx}}" login="{{item.login}}" avatar_url="{{item.avatar_url}}" data-index="{{ idx }}" bindtap="onClickCell"></user-item>
+      </view>
+      <view style="width:750rpx;display:flex;justify-content: center" >
+        <text style="color:#9C9C9C;text-align:center;font-size:30rpx">{{loading ? '正在努力加载...' : '加载更多'}}</text>
+      </view>
+    </div>
+  </div>
+</div>

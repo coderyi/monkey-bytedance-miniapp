@@ -1,0 +1,8 @@
+<!-- pages/city/city.ttml -->
+<!-- <text>pages/city/city.ttml</text> -->
+<view>
+  <nav-bar title="language" showBack="{{true}}"></nav-bar>
+  <view class="item" tt:for="{{rows}}" tt:for-index="idx" data-index="{{ idx }}" bindtap="onClickCell">
+    <text class="item-title">{{item.name}}</text>
+  </view>
+</view>
